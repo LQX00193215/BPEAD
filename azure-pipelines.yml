@@ -22,7 +22,7 @@ stages:
     steps:
     - task: Docker@2
       inputs:
-        containerRegistry: 'DockHub'
+        containerRegistry: 'Docker Hub'
         repository: 'saturdaystar/bp-fe'
         command: 'buildAndPush'
         Dockerfile: '$(Build.SourcesDirectory)/FE/Dockerfile'
@@ -50,7 +50,7 @@ stages:
         sonarQubeRunAnalysis: false
     - task: Docker@2
       inputs:
-        containerRegistry: 'DockHub'
+        containerRegistry: 'Docker Hub'
         repository: 'saturdaystar/bpbe'
         command: 'buildAndPush'
         Dockerfile: '**/Dockerfile'
